@@ -27,7 +27,7 @@ const App = () => {
         <Logo src={iter8} alt='iter8 Logo' />
 
         <Email>
-          contact<Domain>@iter8.ch</Domain>
+          contact<Domain>@example.com</Domain>
         </Email>
       </Container>
       <Particles
