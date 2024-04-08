@@ -99,14 +99,31 @@ export const Logo = styled.img`
   animation: ${rollInBlurredLeft} 1.65s cubic-bezier(0.23, 1, 0.32, 1) 0.5s both;
 `;
 
-export const Email = styled.h1`
+export const Email = styled.button`
+  width: 100%;
   color: black;
+    max-width: 100%;
+    display: inline-block;
+  background: transparent;
   font-family: 'lt-score', sans-serif;
-  font-size: calc(1rem + 1.8vw);
+  font-size: clamp(1rem, 0.6rem + 1.3vw, 2rem);
   animation: ${swingFromTop} 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) 2s both;
+  padding: 0px;
+  margin: 5px;
   margin-top: 20px;
+  white-space: nowrap;
+    
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  }
+    &:focus {
+        outline: none; // Optionally, define a custom outline for focused state or remove it
+    }
 `;
 
 export const Domain = styled.span`
   color: #00ce9a;
+    display: inline-block;
+    max-width: 100%;
 `;

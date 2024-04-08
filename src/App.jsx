@@ -8,7 +8,7 @@ import {
   Email,
   Logo,
 } from './styledComponents';
-import iter8 from './assets/iter8.svg';
+import lj from './assets/lj.jpeg';
 
 const App = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -21,13 +21,21 @@ const App = () => {
 
   const particlesLoaded = useCallback(async (container) => {}, []);
 
+  const copyToClipboard = (str) => {
+    navigator.clipboard.writeText(str).then(() => {
+      alert("My email is copied to your clipboard, now go write me an email!");
+    }).catch(err => {
+      console.error('Failed to copy text: ', err);
+    });
+  };
+
   return (
     <>
       <Container>
-        <Logo src={iter8} alt='iter8 Logo' />
+        <Logo src={lj} alt='LJ Logo' />
 
-        <Email>
-          contact<Domain>@example.com</Domain>
+        <Email onClick={() => copyToClipboard("ljupce995@gmail.com")}>
+          LJUPCE995<Domain>@gmail.com</Domain>
         </Email>
       </Container>
       <Particles
