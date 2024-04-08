@@ -34,8 +34,8 @@ const App = () => {
       <Container>
         <Logo src={lj} alt='LJ Logo' />
 
-        <Email onClick={() => copyToClipboard("ljupce995@gmail.com")}>
-          LJUPCE995<Domain>@gmail.com</Domain>
+        <Email onClick={() => copyToClipboard("LJ@sinadinovski.com")}>
+          LJ<Domain>@sinadinovski.com</Domain>
         </Email>
       </Container>
       <Particles
